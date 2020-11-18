@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: one.uclass.sample
+testFramework: junit
+sourceLanguage: kotlin
+buildTool: maven
+features: [annotation-api, app-name, data, data-jpa, docker, http-client, jdbc-hikari, junit, kotlin, kotlin-application, kotlin-extension-functions, liquibase, logback, maven, netty-server, postgres, readme, shade, testcontainers, yaml]

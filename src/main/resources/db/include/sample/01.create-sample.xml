@@ -1,0 +1,22 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="create_hibernate_sequence" author="Roman Aksenenko">
+        <createSequence sequenceName="hibernate_sequence" startValue="1"/>
+    </changeSet>
+    <changeSet id="create-tables" author="Roman Aksenenko">
+        <createTable tableName="entities">
+            <column name="generic_id" type="bigint">
+                <constraints primaryKey="true" primaryKeyName="sample_pk" nullable="false"/>
+            </column>
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" primaryKeyName="sample_pk" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(1000)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

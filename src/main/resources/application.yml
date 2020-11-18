@@ -1,0 +1,21 @@
+micronaut:
+  application:
+    name: uclassSample
+datasources:
+  default:
+    url: jdbc:postgresql://${POSTGRES_URI:localhost:5432}/postgres
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: ${POSTGRES_PASSWORD}
+    dialect: POSTGRES
+jpa:
+  default:
+    packages-to-scan:
+      - 'one.uclass.example'
+    properties:
+      hibernate:
+        show_sql: true
+liquibase:
+  datasources:
+    default:
+      change-log: 'classpath:db/liquibase-changelog.xml'
